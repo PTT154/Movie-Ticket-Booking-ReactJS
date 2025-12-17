@@ -1,5 +1,9 @@
-import React from "react";
+import HeroCarousel from "./HeroSection/HeroCarousel";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <HeroCarousel />
+    </div>
+  );
 }
