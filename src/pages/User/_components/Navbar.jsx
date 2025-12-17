@@ -1,7 +1,8 @@
 export default function Navbar() {
   return (
-    <nav className="bg-neutral-primary w-full z-20 top-0 start-0 border-b border-default">
+    <nav className="bg-neutral-primary w-full z-20 top-0 start-0 border-default">
       <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {/* <div className="w-full flex flex-wrap items-center justify-between px-8 py-4"> */}
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
