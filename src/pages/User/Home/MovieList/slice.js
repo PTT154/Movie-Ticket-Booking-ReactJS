@@ -1,0 +1,39 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import api from "../../../../services/api";
+
+const initialState = {
+    loading: false,
+    data: null,
+    error: null,
+};
+
+export const fetchMovieList = createAsyncThunk("movieList/fetchMovieList",
+    async (__, { rejectWithValue }) => {
+        try {
+            const result = await api.get("QuanLyPhim/LayDanhSachPhim?maNhom=GP01");
+            return result.data.content;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    })
+
+const movieListSlice = createSlice({
+    name: "movieList",
+    initialState,
+    reducers: {},
+    extraReducers: (builder) => {
+        builder.addCase(fetchMovieList.pending, (state) => {
+            state.loading = true;
+        });
+        builder.addCase(fetchMovieList.fulfilled, (state, action) => {
+            state.loading = false;
+            state.data = action.payload;
+        });
+        builder.addCase(fetchMovieList.rejected, (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+        });
+    },
+});
+
+export default movieListSlice.reducer;
