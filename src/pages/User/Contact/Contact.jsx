@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
     return (
-        <div className="max-w-3xl mx-auto mt-[100px] p-8 bg-white rounded-sm shadow-md">
+        <div className="max-w-3xl mx-auto mt-[120px] p-8 bg-gray-50 rounded-sm shadow-md">
             <h2 className="text-3xl font-bold mb-6 text-center text-orange-500">Liên hệ với chúng tôi</h2>
             <form className="space-y-5">
                 <div>
