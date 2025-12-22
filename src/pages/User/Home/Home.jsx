@@ -1,3 +1,4 @@
+import News from "../News/News";
 import HeroCarousel from "./HeroSection/HeroCarousel";
 import MovieList from "./MovieList/MovieList";
 
@@ -6,6 +7,7 @@ export default function Home() {
         <div>
             <HeroCarousel />
             <MovieList />
+            <News />
         </div>
     );
 }

@@ -73,7 +73,7 @@ export default function MovieCard({ data }) {
 
             {/* Modal Trailer */}
             {showTrailer && youtubeId && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+                <div className="fixed inset-0 z-99999999 flex items-center justify-center bg-black/70"
                     onClick={() => setShowTrailer(false)} //Click ngoài modal để đóng
                 >
                     <div className="relative bg-black rounded-sm overflow-hidden shadow-lg"

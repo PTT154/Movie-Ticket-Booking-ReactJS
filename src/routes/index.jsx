@@ -21,6 +21,14 @@ const routes = [
             {
                 path: "movie-detail/:id",
                 element: lazy(() => import("../pages/User/MovieDetail/MovieDetail")),
+            },
+            {
+                path: "news",
+                element: lazy(() => import("../pages/User/News/News")),
+            },
+            {
+                path: "contact",
+                element: lazy(() => import("../pages/User/Contact/Contact")),
             }
         ]
     },
