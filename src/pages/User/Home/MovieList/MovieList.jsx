@@ -35,15 +35,17 @@ export default function MovieList() {
         <div className="w-full flex flex-col items-center pt-10">
             <QuickBookingBar />
             {/* Tabs */}
-            <div className="flex gap-6 mb-6 mt-12">
+            <div className="flex gap-10 mb-6 mt-12">
                 <button
-                    className={`text-[18px] uppercase border-b-3 ${tab === "dangChieu" ? "font-semibold text-orange-500 border-orange-500" : "text-black font-normal border-transparent"} transition`}
+                    className={`text-[18px] font-medium uppercase border-b-2 hover:text-orange-500 transition-all duration-300 
+                        ${tab === "dangChieu" ? "drop-shadow text-orange-500 border-orange-500" : "text-black border-transparent"} transition`}
                     onClick={() => setTab("dangChieu")}
                 >
                     Đang chiếu
                 </button>
                 <button
-                    className={`text-[18px] uppercase border-b-3 ${tab === "sapChieu" ? "font-semibold text-orange-500 border-orange-500" : "text-black font-normal border-transparent"} transition`}
+                    className={`mr-5 text-[18px] font-medium uppercase border-b-2 hover:text-orange-500 transition-all duration-300 
+                        ${tab === "sapChieu" ? "drop-shadow text-orange-500 border-orange-500" : "text-black border-transparent"} transition`}
                     onClick={() => setTab("sapChieu")}
                 >
                     Sắp chiếu
