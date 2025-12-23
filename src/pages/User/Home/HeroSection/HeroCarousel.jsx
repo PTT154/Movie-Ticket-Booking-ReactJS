@@ -47,12 +47,20 @@ export default function HeroCarousel() {
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-170 overflow-hidden rounded-base md:h-170">
+      {/* <div className="relative h-150 overflow-hidden rounded-base md:h-170"> */}
+      {/* <div className="relative overflow-hidden rounded-base h-[360px] md:h-[480px] lg:h-[560px]"> */}
+      <div
+        className="relative w-full overflow-hidden rounded-base
+                    aspect-[1.5/1]
+                    sm:aspect-[1.8/1]
+                    lg:aspect-[2/1]"
+      >
         {/* Item 1 */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="https://images.angelstudios.com/image/upload/q_auto,f_webp,c_fill,g_faces/v1742923896/king-of-kings-horz-img-01b_qgeths.webp"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            // className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="absolute inset-0 w-full h-full object-cover"
             alt="..."
           />
         </div>
@@ -60,7 +68,8 @@ export default function HeroCarousel() {
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2025/09/avatar-3.jpg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            // className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="absolute inset-0 w-full h-full object-cover"
             alt="..."
           />
         </div>
@@ -68,7 +77,8 @@ export default function HeroCarousel() {
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/71c47741-e31c-4911-8d2d-2ebc0278de75/compose?aspectRatio=1.78&format=webp&width=1200"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            // className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="absolute inset-0 w-full h-full object-cover"
             alt="..."
           />
         </div>
@@ -76,7 +86,8 @@ export default function HeroCarousel() {
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="https://lumiere-a.akamaihd.net/v1/images/cg_buy_tickets_now_for_avatar_fire_and_ash_article_thum_c3527ff5.jpeg?region=0,0,1250,680"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            // className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="absolute inset-0 w-full h-full object-cover"
             alt="..."
           />
         </div>
@@ -84,7 +95,8 @@ export default function HeroCarousel() {
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="https://cdn-media.sforum.vn/storage/app/media/phuonganh/cach-xem-hoang-tu-quy.jpg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            // className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="absolute inset-0 w-full h-full object-cover"
             alt="..."
           />
         </div>
