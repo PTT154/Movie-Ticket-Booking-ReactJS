@@ -55,7 +55,7 @@ export default function MovieList() {
             </div>
             {/* Movie list */}
             <div className="grid grid-cols-4 gap-6 mx-auto max-w-[1265px]">{renderMovieList()}</div>
-            <SeeMoreButton onClick={() => {alert("Clicked")}} />
+            <SeeMoreButton to="/movies" />
         </div>
     )
 }

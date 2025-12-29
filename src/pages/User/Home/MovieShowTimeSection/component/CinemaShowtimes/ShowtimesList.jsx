@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Showtime from "./Showtime";
 
@@ -18,10 +17,12 @@ export default function ShowtimesList() {
 
   return (
     <div>
-      {selectCluster &&
-        selectCluster.danhSachPhim.map((movie) => (
-          <Showtime key={movie.maPhim} movie={movie} />
-        ))}
+      {selectCluster?.danhSachPhim?.map((movie) => (
+        <Showtime
+          key={movie.maPhim}
+          movie={movie}
+        />
+      ))}
     </div>
   );
 }

@@ -9,6 +9,7 @@ export default function Home() {
             <HeroCarousel />
             <MovieList />
             <MovieShowTime />
+            <div className="border-b-4 border-gray-100"></div>
             <News />
         </div>
     );

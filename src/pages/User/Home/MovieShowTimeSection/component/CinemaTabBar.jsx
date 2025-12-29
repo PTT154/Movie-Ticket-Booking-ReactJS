@@ -65,7 +65,7 @@ export default function CinemaTabBar() {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div className="flex items-center gap-4 py-3">
+    <div className="flex items-center gap-4 pb-3">
       {data &&
         data.map((cinema) => (
           <CinemaTab
