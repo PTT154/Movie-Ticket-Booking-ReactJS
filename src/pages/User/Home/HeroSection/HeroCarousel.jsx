@@ -43,17 +43,15 @@ export default function HeroCarousel() {
   return (
     <div
       id="default-carousel"
-      className="relative w-full px-32"
+      className="relative w-full"
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
       {/* <div className="relative h-150 overflow-hidden rounded-base md:h-170"> */}
       {/* <div className="relative overflow-hidden rounded-base h-[360px] md:h-[480px] lg:h-[560px]"> */}
       <div
-        className="relative w-full overflow-hidden rounded-base
-                    aspect-[1.5/1]
-                    sm:aspect-[1.8/1]
-                    lg:aspect-[2/1]"
+        className="relative w-full overflow-hidden"
+        style={{ height: "calc(100vh - 92px)" }}
       >
         {/* Item 1 */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
@@ -105,35 +103,35 @@ export default function HeroCarousel() {
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         <button
           type="button"
-          className="w-3 h-3 rounded-base"
+          className="w-3 h-3 rounded-base bg-white/80 border border-orange-500"
           aria-current="true"
           aria-label="Slide 1"
           data-carousel-slide-to={0}
         />
         <button
           type="button"
-          className="w-3 h-3 rounded-base"
+          className="w-3 h-3 rounded-base bg-white/80 border border-orange-500"
           aria-current="false"
           aria-label="Slide 2"
           data-carousel-slide-to={1}
         />
         <button
           type="button"
-          className="w-3 h-3 rounded-base"
+          className="w-3 h-3 rounded-base bg-white/80 border border-orange-500"
           aria-current="false"
           aria-label="Slide 3"
           data-carousel-slide-to={2}
         />
         <button
           type="button"
-          className="w-3 h-3 rounded-base"
+          className="w-3 h-3 rounded-base bg-white/80 border border-orange-500"
           aria-current="false"
           aria-label="Slide 4"
           data-carousel-slide-to={3}
         />
         <button
           type="button"
-          className="w-3 h-3 rounded-base"
+          className="w-3 h-3 rounded-base bg-white/80 border border-orange-500"
           aria-current="false"
           aria-label="Slide 5"
           data-carousel-slide-to={4}
@@ -145,7 +143,7 @@ export default function HeroCarousel() {
         className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         data-carousel-prev
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
           <svg
             className="w-5 h-5 text-white rtl:rotate-180"
             aria-hidden="true"
@@ -171,7 +169,7 @@ export default function HeroCarousel() {
         className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         data-carousel-next
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
           <svg
             className="w-5 h-5 text-white rtl:rotate-180"
             aria-hidden="true"

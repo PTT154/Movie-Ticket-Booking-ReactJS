@@ -1,21 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-
-function getRandomLabel() {
-    const labels = ["P", "C16", "C18"];
-    return labels[Math.floor(Math.random() * labels.length)];
-}
-
-function getLabelColor(label) {
-    switch (label) {
-        case "P":
-            return "bg-green-400";
-        case "C16":
-            return "bg-orange-400";
-        case "C18":
-            return "bg-red-500";
-    }
-}
+import { getRandomLabel, getLabelColor } from "../../../../utils/movieLabelUtils";
 
 export default function MovieCard({ data }) {
     // destructuring các trường cần thiết từ data
@@ -36,7 +21,7 @@ export default function MovieCard({ data }) {
     const youtubeId = getYoutubeId(trailer);
 
     return (
-        <div className="w-full rounded-sm overflow-hidden bg-gray-50 p-1.5 font-sans group shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="w-full rounded-sm overflow-hidden bg-gray-50 p-1.5 font-sans group shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
             <div className="relative w-full h-[430px] bg-gray-300 rounded-sm mb-2 flex items-center justify-center overflow-hidden">
                 <img src={hinhAnh} alt={tenPhim} className="w-full h-full object-cover rounded-sm" />
                 {/* Nhãn độ tuổi */}

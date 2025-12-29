@@ -6,3 +6,13 @@
 button {
     cursor: pointer;
 }
+
+[data-carousel-slide-to][aria-current="true"] {
+    background-color: #FF6900 !important;
+    /* Màu trắng cho active */
+}
+
+[data-carousel-slide-to][aria-current="false"] {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    /* Màu nhạt cho inactive */
+}

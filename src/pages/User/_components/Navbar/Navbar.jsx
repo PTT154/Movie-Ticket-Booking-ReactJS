@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -21,14 +20,14 @@ export default function Navbar() {
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
             src="/assets/images/Star_Cinema_logo.svg.png"
-            className="h-[80px]"
+            className="h-[60px]"
             alt="Flowbite Logo"
           />
         </a>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-sm md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-sm md:hidden hover:bg-neutral-secondary-soft hover:text-heading"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -103,7 +102,7 @@ export default function Navbar() {
             <li>
               <button
                 type="button"
-                className="text-white bg-orange-500 box-border border border-transparent hover:bg-orange-600 focus:ring-4 focus:ring-orange-400 shadow-xs font-medium leading-5 rounded-sm text-sm px-4 py-2.5 focus:outline-none"
+                className="text-white bg-orange-500 box-border border border-transparent hover:bg-orange-600 shadow-xs font-medium leading-5 rounded-sm text-sm px-4 py-2.5"
               >
                 Đăng nhập
               </button>

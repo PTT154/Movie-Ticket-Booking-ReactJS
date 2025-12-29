@@ -1,7 +1,8 @@
 import React from 'react'
+import MovieShowTime from "./../Home/MovieShowTimeSection/MovieShowTime";
 
 export default function Showtimes() {
   return (
-    <div>Showtimes</div>
+    <MovieShowTime />
   )
 }

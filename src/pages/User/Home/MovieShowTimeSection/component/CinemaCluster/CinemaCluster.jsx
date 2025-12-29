@@ -12,10 +12,10 @@ export default function CinemaCluster(props) {
   return (
     <div
       onClick={() => handleCinemaClusterID(cluster)}
-      className="flex items-start gap-3 p-3 rounded-lg border hover:bg-gray-50 transition"
+      className="cursor-pointer flex items-start gap-3 p-3 rounded-sm border border-gray-200 hover:bg-gray-50 transition shadow-sm"
     >
       {/* Logo left */}
-      <div className="w-12 h-12 flex items-center justify-center shrink-0">
+      <div className="w-10 h-10 flex items-center justify-center shrink-0">
         <img
           src={activeCinema.logo}
           alt={activeCinema.maHeThongRap}
@@ -25,8 +25,8 @@ export default function CinemaCluster(props) {
 
       {/* Right text */}
       <div className="min-w-0">
-        <p className="font-semibold leading-5 truncate">{cluster.tenCumRap}</p>
-        <p className="text-sm text-gray-500 leading-5 line-clamp-2">
+        <p className="font-semibold leading-5">{cluster.tenCumRap}</p>
+        <p className="text-sm text-gray-500 leading-5">
           {cluster.diaChi}
         </p>
       </div>
