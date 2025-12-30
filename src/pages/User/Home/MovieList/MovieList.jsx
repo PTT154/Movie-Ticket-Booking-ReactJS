@@ -17,7 +17,7 @@ export default function MovieList() {
     //Lấy api list movie
     useEffect(() => {
         dispatch(fetchMovieList());
-    }, [])
+    }, []);
 
     const renderMovieList = () => {
         const { data } = state;

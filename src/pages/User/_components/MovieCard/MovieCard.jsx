@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { getRandomLabel, getLabelColor } from "../../../../utils/movieLabelUtils";
+import { Link } from 'react-router-dom';
+import TrailerModal from "../TrailerModal/TrailerModal";
 
 export default function MovieCard({ data }) {
     // destructuring các trường cần thiết từ data
@@ -11,14 +13,14 @@ export default function MovieCard({ data }) {
     // State để mở modal trailer
     const [showTrailer, setShowTrailer] = useState(false);
 
-    // Hàm lấy id video từ link youtube
-    const getYoutubeId = (url) => {
-        if (!url) return "";
-        const regExp = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([^&#]*)/;
-        const match = url.match(regExp);
-        return match && match[1] ? match[1] : "";
-    };
-    const youtubeId = getYoutubeId(trailer);
+    // // Hàm lấy id video từ link youtube
+    // const getYoutubeId = (url) => {
+    //     if (!url) return "";
+    //     const regExp = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([^&#]*)/;
+    //     const match = url.match(regExp);
+    //     return match && match[1] ? match[1] : "";
+    // };
+    // const youtubeId = getYoutubeId(trailer);
 
     return (
         <div className="w-full rounded-sm overflow-hidden bg-gray-50 p-1.5 font-sans group shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
@@ -37,9 +39,9 @@ export default function MovieCard({ data }) {
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 {/* Nút khi hover */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                    <button className="w-[130px] h-[42px] bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-sm flex items-center gap-2 shadow">
+                    <Link to={`/movie-detail/${data.maPhim}`} className="w-[130px] h-[42px] bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-sm flex items-center gap-2 shadow">
                         <i className="fa-solid fa-ticket"></i> Mua vé
-                    </button>
+                    </Link>
                     <button className="w-[130px] h-[42px] border border-white text-white font-semibold px-5 py-2 rounded-sm flex items-center gap-2 bg-black/30 hover:bg-black/50 transition"
                         onClick={() => setShowTrailer(true)}>
                         <i className="fa-solid fa-circle-play"></i> Trailer
@@ -49,7 +51,7 @@ export default function MovieCard({ data }) {
 
             <div className="mt-2 flex justify-between">
                 <div>
-                    <div className="text-[16px] font-medium">{tenPhim || "Tên phim"}</div>
+                    <Link to={`/movie-detail/${data.maPhim}`} className="text-[16px] font-medium">{tenPhim || "Tên phim"}</Link>
                     <div className="text-[13px] text-gray-700">
                         180 phút - {danhGia || "6.9"} IMDb
                     </div>
@@ -57,7 +59,7 @@ export default function MovieCard({ data }) {
             </div>
 
             {/* Modal Trailer */}
-            {showTrailer && youtubeId && (
+            {/* {showTrailer && youtubeId && (
                 <div className="fixed inset-0 z-99999999 flex items-center justify-center bg-black/70"
                     onClick={() => setShowTrailer(false)} //Click ngoài modal để đóng
                 >
@@ -81,6 +83,11 @@ export default function MovieCard({ data }) {
                         ></iframe>
                     </div>
                 </div>
+            )} */}
+
+            {/* refactor Trailer Modal */}
+            {showTrailer && (
+                <TrailerModal trailer={trailer} onClose={() => setShowTrailer(false)} />
             )}
         </div>
     )
